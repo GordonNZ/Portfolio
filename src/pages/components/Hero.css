@@ -1,0 +1,39 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* flex-direction: column; */
+  background-color: rgb(241, 241, 241);
+  background-position: center;
+  background-size: cover;
+}
+.heroLeftContainer {
+  width: 60%;
+  margin: 0 1em 0 6em;
+}
+.heroTitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 550;
+}
+.heroName {
+  font-size: clamp(3rem, 4rem + 2vw, 5rem);
+  position: relative;
+  left: 4rem;
+  background: linear-gradient(to right, #a2d2ff, #ffafcc, #bde0fe, #cdb4db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  max-width: fit-content;
+}
+.heroDesc {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  position: relative;
+  left: 6rem;
+  font-weight: 600;
+}
+.heroP {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  position: relative;
+  left: 6rem;
+}
