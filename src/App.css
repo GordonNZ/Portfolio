@@ -23,6 +23,19 @@
   font-family: 'Switzer-Variable', sans-serif;
 }
 :root {
+  --accentGradient: linear-gradient(
+    to right,
+    #a2d2ff,
+    #ffafcc,
+    #bde0fe,
+    #cdb4db
+  );
+  --textMainWhite: #f8f8f8;
+  --textMainBlack: #212427;
+}
+
+html {
+  background-color: var(--textMainWhite);
 }
 
 /* .homePage {

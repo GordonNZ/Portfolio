@@ -14,12 +14,12 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: rgba(131, 131, 131, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 59, 135, 0.37);
+  background: rgba(111, 111, 111, 0.25);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 59, 135, 0.37); */
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: rgb(254, 254, 254);
+  color: var(--textMainWhite);
   /* margin-top: -10vh; */
 }
 .heroLeftContainer {

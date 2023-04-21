@@ -39,7 +39,7 @@ export default function Hero() {
           <h1 className='heroName'>Gordon Zam</h1>
           <h2 className='heroDesc'>Aspiring Frontend Developer</h2>
           <p className='heroP'>
-            I have a passion for innovative tech and a love for learning.
+            I have a passion for innovative tech and a love for learning
           </p>
         </div>
         <img

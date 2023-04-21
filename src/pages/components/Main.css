@@ -1,3 +1,51 @@
 main > * {
   margin: 5em 2em;
+  color: var(--textMainBlack);
+}
+.mainHeaders {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.mainH2 {
+  font-size: 2.25rem;
+  /* margin: 0 5em 0 0; */
+  text-align: center;
+  font-weight: 800;
+}
+.mainH2Line {
+  height: 4px;
+  width: 30%;
+  background: var(--accentGradient);
+}
+.articleFlex {
+  display: flex;
+  justify-content: center;
+}
+article {
+  padding: 2em 3em;
+  width: 35%;
+  border: 2px solid var(--textMainBlack);
+  border-width: 3px 1.5px;
+}
+.mainH3 {
+  margin: 0.5em 0 0.8em 0;
+}
+.mainGrid {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  /* grid-template-areas: 'a a a a'; */
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 1em 10em;
+}
+.mainH4 {
+  font-size: 1.2rem;
+}
+.mainGridItem {
+  font-size: 4rem;
+  padding: 1em 1em;
 }

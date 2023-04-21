@@ -10,9 +10,12 @@ nav {
   left: 0;
   z-index: 1;
   width: 100%;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--textMainBlack);
 }
 nav > * {
-  margin: 0 1em;
+  margin: 0 3em;
 }
 .navLogo {
   font-family: 'Boska-Variable', sans-serif;
@@ -31,5 +34,11 @@ a {
   transition: 100ms linear;
 }
 a:hover {
-  color: white;
+  color: var(--textMainWhite);
+}
+.flex {
+  display: flex;
+}
+li {
+  margin-left: 0.3em;
 }
