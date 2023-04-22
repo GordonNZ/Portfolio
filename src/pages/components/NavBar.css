@@ -1,0 +1,45 @@
+nav {
+  /* background-color: #52525250; */
+  border-bottom: 2px solid white;
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: var(--textMainBlack);
+}
+nav > * {
+  margin: 0 3em;
+}
+.navLogo {
+  /* font-family: 'Boska-Variable', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.navList {
+  display: flex;
+  list-style: none;
+}
+.navList > * {
+  margin: 0 1em;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 100ms linear;
+}
+a:hover {
+  color: var(--textMainWhite);
+}
+.flex {
+  display: flex;
+}
+li {
+  margin-left: 0.3em;
+}
