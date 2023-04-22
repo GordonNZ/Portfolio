@@ -9,6 +9,8 @@ import {
   FaGithub,
   FaCogs,
   FaFileCode,
+  FaJsSquare,
+  FaArrowRight,
 } from 'react-icons/fa';
 
 export default function Main() {
@@ -52,6 +54,10 @@ export default function Main() {
             <h4 className='mainH4'>CSS</h4>
           </div>
           <div className='mainGridItem'>
+            <FaJsSquare />
+            <h4 className='mainH4'>JavaScript</h4>
+          </div>
+          <div className='mainGridItem'>
             <FaReact />
             <h4 className='mainH4'>React.js</h4>
           </div>
@@ -73,34 +79,33 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section>
+      <section className='mainProjectSection'>
         <h2 className='mainH2'>Projects</h2>
-        <article>
+        <article className='mainProjectArticle'>
           <img src='' alt='colourful todo web app'></img>
           <h3 className='mainH3'>myToDoList</h3>
           <p>Frontend Project</p>
           <a href='https://github.com/GordonNZ/todolistbygordon' target='blank'>
-            Github
+            Github <FaArrowRight className='icons' />
           </a>
 
-          <p>
+          <p className='projectDesc'>
             A todo app I built using react hooks with React.js. Key
             functionalities include the ability to add task title, description,
             completion deadline, colour selection, as well as the capability to
             mark tasks as complete or remove them entirely.
           </p>
         </article>
-        <article>
+        <article className='mainProjectArticle'>
           <img src='' alt='MissionX LevelUp Works Website'></img>
           <h3 className='mainH3'>'LevelUp Works' (Mission Ready)</h3>
           <p>Fullstack Project</p>
           <p>Github repo is privated</p>
-          <p>
+          <p className='projectDesc'>
             As part of my 12-week Full Stack Developer Accelerator at Mission
             Ready, I contributed to a collaborative team of four in the
             development of a functional website, according to the provided
             design brief.
-            <br />
             <br />
             My responsibilities included the development of two web pages,
             encompassing both front-end development using React.js and back-end

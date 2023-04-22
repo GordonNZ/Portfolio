@@ -14,15 +14,15 @@ export default function NavBar() {
           target='blank'
           className='flex'
         >
-          <FaLinkedin />
+          <FaLinkedin className='icons' />
           <li>Linkedin</li>
         </a>
         <a href='https://github.com/GordonNZ' target='blank' className='flex'>
-          <FaGithub />
+          <FaGithub className='icons' />
           <li>Github</li>
         </a>
         <div className='flex'>
-          <VscFilePdf />
+          <VscFilePdf className='icons' />
           <li>Resume</li>
         </div>
       </ul>

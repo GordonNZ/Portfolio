@@ -18,8 +18,9 @@ nav > * {
   margin: 0 3em;
 }
 .navLogo {
-  font-family: 'Boska-Variable', sans-serif;
-  font-weight: 900;
+  /* font-family: 'Boska-Variable', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 .navList {
   display: flex;

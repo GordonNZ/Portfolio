@@ -3,6 +3,7 @@ import './Hero.css';
 import axios from 'axios';
 //npm i @react-spring/parallax
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import gordon from '../../assets//img/gordon.jpg';
 
 export default function Hero() {
   const [background, setBackground] = useState('');
@@ -31,11 +32,19 @@ export default function Hero() {
     //   .catch((err) => console.log(err));
   }, []);
 
+  const time = new Date().getHours();
+  const greeting =
+    time < 12
+      ? 'Good Morning!'
+      : time < 18
+      ? 'Good Afternoon!'
+      : 'Good Evening!';
+
   return (
     <div className='heroBg' style={{ backgroundImage: `url(${background})` }}>
       <div className='heroOverlay'>
         <div className='heroLeftContainer'>
-          <h1 className='heroTitle'>Good Morning! Welcome to my portfolio!</h1>
+          <h1 className='heroTitle'>{greeting} Welcome to my portfolio!</h1>
           <h1 className='heroName'>Gordon Zam</h1>
           <h2 className='heroDesc'>Aspiring Frontend Developer</h2>
           <p className='heroP'>
@@ -43,7 +52,7 @@ export default function Hero() {
           </p>
         </div>
         <img
-          src=''
+          src={gordon}
           alt='Gordon Zam'
           className='heroImg
           '
