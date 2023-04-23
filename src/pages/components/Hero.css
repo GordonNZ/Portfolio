@@ -33,7 +33,7 @@
   font-weight: 550;
 }
 .heroName {
-  font-size: clamp(3rem, 4rem + 2vw, 5rem);
+  font-size: clamp(2rem, 3rem + 2vw, 5rem);
   position: relative;
   left: 4rem;
   /* font-family: 'Boska-Variable'; */

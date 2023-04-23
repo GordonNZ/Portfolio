@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.css';
 //npm i react-icons
 import {
@@ -12,6 +12,8 @@ import {
   FaJsSquare,
   FaArrowRight,
 } from 'react-icons/fa';
+import ImageSlider from './ImageSlider';
+import { ToDoSlides } from './ToDoSlides';
 
 export default function Main() {
   return (
@@ -82,13 +84,17 @@ export default function Main() {
       <section className='mainProjectSection'>
         <h2 className='mainH2'>Projects</h2>
         <article className='mainProjectArticle'>
-          <img src='' alt='colourful todo web app'></img>
+          <ImageSlider slides={ToDoSlides} />
           <h3 className='mainH3'>myToDoList</h3>
-          <p>Frontend Project</p>
-          <a href='https://github.com/GordonNZ/todolistbygordon' target='blank'>
-            Github <FaArrowRight className='icons' />
-          </a>
-
+          <div className='flex projectInfo'>
+            <p>Frontend Project</p>
+            <a
+              href='https://github.com/GordonNZ/todolistbygordon'
+              target='blank'
+            >
+              Github <FaArrowRight className='icons' />
+            </a>
+          </div>
           <p className='projectDesc'>
             A todo app I built using react hooks with React.js. Key
             functionalities include the ability to add task title, description,
@@ -99,8 +105,11 @@ export default function Main() {
         <article className='mainProjectArticle'>
           <img src='' alt='MissionX LevelUp Works Website'></img>
           <h3 className='mainH3'>'LevelUp Works' (Mission Ready)</h3>
-          <p>Fullstack Project</p>
-          <p>Github repo is privated</p>
+          <div className='flex projectInfo'>
+            <p>Fullstack Project</p>
+            <p>Github repo is privated</p>
+          </div>
+
           <p className='projectDesc'>
             As part of my 12-week Full Stack Developer Accelerator at Mission
             Ready, I contributed to a collaborative team of four in the

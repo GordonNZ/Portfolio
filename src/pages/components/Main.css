@@ -69,3 +69,6 @@ article {
 .projectDesc {
   margin: 1em 0;
 }
+.projectInfo {
+  justify-content: space-between;
+}
