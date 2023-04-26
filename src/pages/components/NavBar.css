@@ -8,11 +8,46 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 11;
   width: 100%;
+  /* background: rgba(35, 35, 35, 0.25); */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  color: var(--textMainWhite);
+}
+.sticky {
+  position: fixed;
   color: var(--textMainBlack);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(32, 32, 32, 0.35);
+  animation: stickyAnimate 0.3s ease-in-out;
+}
+@keyframes stickyAnimate {
+  0% {
+    opacity: 0.2;
+    top: -10vh;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+.animateOut {
+  animation: animateOut 0.2s ease-in-out;
+}
+@keyframes animateOut {
+  0% {
+    opacity: 0.9;
+    top: 0;
+    position: fixed;
+    color: var(--textMainBlack);
+  }
+  100% {
+    opacity: 0.1;
+    top: -10vh;
+    position: absolute;
+  }
 }
 nav > * {
   margin: 0 3em;
@@ -21,6 +56,7 @@ nav > * {
   /* font-family: 'Boska-Variable', sans-serif; */
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.2);
 }
 .navList {
   display: flex;
@@ -34,12 +70,20 @@ a {
   color: inherit;
   transition: 100ms linear;
 }
-a:hover {
-  color: var(--textMainWhite);
-}
 .flex {
   display: flex;
 }
 li {
   margin-left: 0.3em;
+}
+
+a:hover {
+  background: linear-gradient(to right, #a2d2ff, #ffafcc, #bde0fe, #cdb4db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  max-width: fit-content;
+  transition: 100ms linear;
+  transform: scale(1.1);
+  font-weight: 550;
 }

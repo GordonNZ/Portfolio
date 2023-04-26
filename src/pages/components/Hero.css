@@ -33,7 +33,7 @@
   font-weight: 550;
 }
 .heroName {
-  font-size: clamp(3rem, 4rem + 2vw, 5rem);
+  font-size: clamp(2rem, 3rem + 2vw, 5rem);
   position: relative;
   left: 4rem;
   /* font-family: 'Boska-Variable'; */
@@ -42,16 +42,30 @@
   text-shadow: 1px 3px 11px rgba(0, 0, 0, 0.3);
 }
 .heroDesc {
+  --bg-size: 200%;
   font-size: clamp(1rem, 2vw, 1.4rem);
   position: relative;
   left: 6rem;
-  font-weight: 600;
-  background: linear-gradient(to right, #a2d2ff, #ffafcc, #bde0fe, #cdb4db);
+  font-weight: 700;
+  background: linear-gradient(to right, #a2d2ff, #ffafcc, #cdb4db, #a2d2ff) 0 0 /
+    var(--bg-size) 120%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+  /* animation: animateHeroDesc 5s infinite linear; */
   max-width: fit-content;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .heroDesc {
+    animation: animateHeroDesc 4s infinite linear;
+  }
+  @keyframes animateHeroDesc {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}
+
 .heroP {
   font-size: clamp(0.8rem, 2vw, 1rem);
   position: relative;

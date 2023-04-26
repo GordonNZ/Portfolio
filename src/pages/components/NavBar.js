@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NavBar.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { VscFilePdf } from 'react-icons/vsc';
 
 export default function NavBar() {
+  const [position, setPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setPosition(position);
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  // console.log(position);
+
   return (
-    <nav>
+    <nav className={position > 700 ? 'sticky' : 'animateOut'}>
       {/* <img src='' alt='logo'></img> */}
       <h1 className='navLogo'>Gordon Zam</h1>
       <ul className='navList'>

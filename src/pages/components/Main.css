@@ -1,5 +1,5 @@
-main > * {
-  margin: 5em 2em 0 2em;
+section {
+  margin: 0 2em 0 2em;
   color: var(--textMainBlack);
 }
 .mainHeaders {
@@ -14,6 +14,10 @@ main > * {
   font-weight: 800;
   z-index: 1;
   margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+.firstH2 {
+  margin-top: 2em;
 }
 .mainH2Line {
   z-index: -1;
@@ -56,11 +60,11 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2em 2em;
+  margin: 0 2em;
 }
 .mainProjectArticle {
   margin: 1em 0;
-  width: 50%;
+  width: 55%;
 }
 .icons {
   position: relative;
@@ -68,4 +72,38 @@ article {
 }
 .projectDesc {
   margin: 1em 0;
+}
+.projectInfo {
+  justify-content: space-between;
+}
+.projectSlideContainer {
+  width: 100%;
+  height: 100%;
+}
+.blob {
+  background-color: white;
+  height: 400px;
+  aspect-ratio: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accentGradient);
+  z-index: -2;
+  /* animation: rotate 20s infinite; */
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.blur {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  backdrop-filter: blur(100px);
+  background-color: brown;
 }
