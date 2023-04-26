@@ -26,7 +26,7 @@ export default function ImageSlider({ slides }) {
     width: '100%',
     height: '60vh',
   };
-  console.log(slides[current].image, 'hello from imageslider');
+  // console.log(slides[current].image, 'hello from imageslider');
   return (
     <div className='slider'>
       <FaAngleLeft className='leftArrow arrow' onClick={prevSlide} />

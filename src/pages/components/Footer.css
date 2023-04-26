@@ -1,0 +1,34 @@
+.footer {
+  height: 55vh;
+  /* justify-content: center; */
+  margin-top: 5em;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid var(--textMainBlack);
+}
+.connectH2 {
+  margin: 1em 1em;
+  font-size: 2.25rem;
+}
+.connectLink {
+  margin: 0.5em 1em;
+  font-size: 1.5rem;
+}
+.connectLink:hover {
+  transform: scale(1.05);
+}
+.contactEmailH3 {
+  margin: 1em;
+  font-size: 2rem;
+}
+.contactEmail {
+  font-size: 1.8rem;
+  transition: all 0.15s ease-in-out;
+}
+.contactEmail:hover {
+  transform: scale(1.1);
+  font-weight: 600;
+}
+.iconText {
+  margin: 0 0.3em;
+}

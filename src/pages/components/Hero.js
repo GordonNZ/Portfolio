@@ -46,7 +46,10 @@ export default function Hero() {
         <div className='heroLeftContainer'>
           <h1 className='heroTitle'>{greeting} Welcome to my portfolio!</h1>
           <h1 className='heroName'>Gordon Zam</h1>
-          <h2 className='heroDesc'>Aspiring Frontend Developer</h2>
+
+          <div className='heroDescBg'>
+            <h2 className='heroDesc'>Aspiring Frontend Developer</h2>
+          </div>
           <p className='heroP'>
             I have a passion for innovative tech and a love for learning
           </p>

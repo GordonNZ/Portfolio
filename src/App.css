@@ -39,6 +39,7 @@
 
 html {
   background-color: var(--textMainWhite);
+  scroll-behavior: smooth;
 }
 
 /* .homePage {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Main.css';
 //npm i react-icons
 import {
@@ -17,39 +17,76 @@ import { ToDoSlides } from './ToDoSlides';
 import { MissionXSlides } from './MissionXSlides';
 
 export default function Main() {
-  // const ToDoSlides = [
-  //   {
-  //     url: '../../../assets/img/todoslides/todoslide1.png',
-  //     title: 'todo slide 1',
-  //   },
-  //   {
-  //     url: '../../assets/img/todoslides/todoslide2.png',
-  //     title: 'todo slide 2',
-  //   },
-  //   {
-  //     url: '../../assets/img/todoslides/todoslide3.png',
-  //     title: 'todo slide 3',
-  //   },
-  //   {
-  //     url: '../../assets/img/todoslides/todoslide4.png',
-  //     title: 'todo slide 4',
-  //   },
-  //   {
-  //     url: '../../assets/img/todoslides/todoslide5.png',
-  //     title: 'todo slide 5',
-  //   },
-  //   {
-  //     url: '../../assets/img/todoslides/todoslide6.png',
-  //     title: 'todo slide 6',
-  //   },
-  // ];
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const blobRef = useRef(null);
+
+  useEffect(() => {
+    if (blobRef.current) {
+      if (mousePosition.y + position < pageHeight - 100) {
+        blobRef.current.animate(
+          {
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y + position}px`,
+          },
+          {
+            duration: 500,
+            fill: 'forwards',
+          }
+        );
+      }
+    }
+  }, [mousePosition]);
+
+  const [position, setPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setPosition(position);
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // console.log(mousePosition.x, mousePosition.y + position);
+  // console.log(position);
+
+  function handleMouseMove(e) {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  }
+
+  useEffect(() => {
+    // function handleMouseMove(e) {
+    //   setPosition({ x: e.clientX, y: e.clientY });
+    // }
+    document.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const [pageHeight, setPageHeight] = useState(0);
+
+  useEffect(() => {
+    function updatePageHeight() {
+      setPageHeight(document.documentElement.scrollHeight);
+    }
+
+    updatePageHeight();
+    window.addEventListener('resize', updatePageHeight);
+    return () => {
+      window.removeEventListener('resize', updatePageHeight);
+    };
+  }, []);
 
   return (
     <main>
+      <div
+        style={{ left: mousePosition.x, top: mousePosition.y }}
+        className='blob'
+        ref={blobRef}
+      ></div>
+      <div className='blur'></div>
       <section>
         <div className='mainHeaders'>
           <div className='mainH2Line'></div>
-          <h2 className='mainH2'>Background</h2>
+          <h2 className='mainH2 firstH2'>Background</h2>
         </div>
         <div className='articleFlex'>
           <article>
@@ -151,7 +188,7 @@ export default function Main() {
             design brief.
             <br />
             My responsibilities included the development of two web pages,
-            encompassing both front-end development using axios get and post
+            encompassing both front-end development, using axios get and post
             methods with React.js and back-end development using Node.js and
             Express.js. The database was constructed utilizing MySQL Workbench.
             <br />
