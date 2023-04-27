@@ -31,7 +31,7 @@
     #a2d2ff,
     #ffafcc,
     #bde0fe,
-    #cdb4db
+    #b588cf
   );
   --textMainWhite: #f8f8f8;
   --textMainBlack: #212427;
@@ -40,8 +40,14 @@
 html {
   background-color: var(--textMainWhite);
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+html,
+body {
+  min-height: 100% !important;
 }
 
-/* .homePage {
-  position: relative;
-} */
+.homePage {
+  height: 100% !important;
+}

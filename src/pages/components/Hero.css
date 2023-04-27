@@ -9,7 +9,7 @@
   background-size: cover;
 }
 .heroOverlay {
-  min-height: 100vh;
+  min-height: 110vh;
   min-width: 100%;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@
   position: relative;
   left: 6rem;
   font-weight: 700;
-  background: linear-gradient(to right, #a2d2ff, #ffafcc, #cdb4db, #a2d2ff) 0 0 /
+  background: linear-gradient(to right, #a2d2ff, #ffafcc, #ca9be5, #a2d2ff) 0 0 /
     var(--bg-size) 120%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
