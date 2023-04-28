@@ -1,5 +1,5 @@
 section {
-  margin: 0 2em 0 2em;
+  margin: 0 2em;
   color: var(--textMainBlack);
   height: 100%;
 }
@@ -10,7 +10,7 @@ section {
   margin-bottom: 1em;
 } */
 .mainH2 {
-  font-size: 2.25rem;
+  font-size: clamp(1rem, 9vw, 2.25rem);
   text-align: center;
   font-weight: 800;
   z-index: 1;
@@ -41,13 +41,13 @@ article {
   text-align: center;
   justify-content: center;
   justify-items: center;
-  margin: 0 10em;
+  margin: 0 8em;
 }
 .mainH4 {
   font-size: 1.2rem;
 }
 .mainGridItem {
-  font-size: 4rem;
+  font-size: clamp(3rem, 6vw, 4rem);
   padding: 1em 1em 0 1em;
 }
 .mainProjectSection {
@@ -127,5 +127,45 @@ main {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    margin: 0 1em;
+  }
+  article {
+    padding: 2em 1em;
+    width: 100%;
+  }
+  .blob {
+    height: 100px;
+  }
+  .mainGrid {
+    margin: 0 2em;
+  }
+  .mainProjectArticle {
+    margin: 1em 0.5em;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .articleFlex {
+    flex-direction: column;
+    margin: 2em;
+  }
+  .mainGrid {
+    grid-auto-flow: row;
+    grid-template-areas: 'a a';
+    margin: 0 0.7em;
+  }
+  .mainGridItem {
+    padding: 0.5em 0.2em 0 0.2em;
+  }
+}
+
+@media (max-width: 375px) {
+  .mainProjectSection {
+    margin: 0 0.5em;
   }
 }

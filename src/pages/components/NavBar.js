@@ -3,6 +3,8 @@ import './NavBar.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { VscFilePdf } from 'react-icons/vsc';
 
+const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
+
 export default function NavBar() {
   const [position, setPosition] = useState(0);
   const handleScroll = () => {
@@ -11,6 +13,10 @@ export default function NavBar() {
   };
   window.addEventListener('scroll', handleScroll, { passive: true });
   // console.log(position);
+
+  const downloadResume = () => {
+    window.open(RESUME);
+  };
 
   return (
     <nav className={position > 700 ? 'sticky' : 'animateOut'}>
@@ -29,10 +35,10 @@ export default function NavBar() {
           <FaGithub className='icons' />
           <li>Github</li>
         </a>
-        <div className='flex'>
+        <a className='flex resume' onClick={downloadResume}>
           <VscFilePdf className='icons' />
           <li>Resume</li>
-        </div>
+        </a>
       </ul>
     </nav>
   );

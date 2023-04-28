@@ -18,7 +18,6 @@
   position: absolute;
   top: 50%;
   right: 20px;
-  font-size: 3rem;
 
   z-index: 2;
   cursor: pointer;
@@ -29,7 +28,6 @@
   position: absolute;
   top: 50%;
   left: 20px;
-  font-size: 3rem;
   z-index: 2;
   cursor: pointer;
   user-select: none;
@@ -39,6 +37,7 @@
   color: var(--textMainWhite);
   opacity: 0.2;
   background-color: var(--textMainBlack);
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .arrow:hover {
@@ -53,4 +52,7 @@
 .slide.active {
   opacity: 1;
   transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 375px) {
 }

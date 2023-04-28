@@ -69,6 +69,7 @@ a {
   text-decoration: none;
   color: inherit;
   transition: 100ms linear;
+  font-size: clamp(1rem, 5vw, 1.05rem);
 }
 .flex {
   display: flex;
@@ -86,4 +87,22 @@ a:hover {
   transition: 100ms linear;
   transform: scale(1.1);
   font-weight: 550;
+}
+.resume {
+  cursor: pointer;
+}
+
+@media (max-width: 375px) {
+  nav {
+    flex-direction: column;
+  }
+  .navList > * {
+    margin: 0 0.5em;
+  }
+  .navLogo {
+    font-size: 1.35em;
+  }
+  .navList {
+    font-size: 1.2em;
+  }
 }
