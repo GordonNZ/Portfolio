@@ -67,35 +67,43 @@ export default function Main() {
 
   function handleMouseMove(e) {
     setMousePosition({ x: e.clientX, y: e.clientY });
-
     const newX = e.clientX;
     const newY = e.clientY;
 
-    // Check if the div is at the bottom of the page
-    const windowHeight = window.innerHeight;
-    const divHeight = blobRef.current.offsetHeight;
-    if (newY + divHeight > windowHeight + 100) {
-      setMousePosition({ x: newX, y: windowHeight - divHeight + 100 });
+    if (blobRef.current) {
+      // Check if the div is at the bottom of the page
+      const windowHeight = window.innerHeight;
+      const divHeight = blobRef.current.offsetHeight;
+      if (newY + divHeight > windowHeight + 100) {
+        setMousePosition({ x: newX, y: windowHeight - (divHeight - 100) });
+      }
     }
   }
 
   useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
+    if (windowWidth > 1024) {
+      document.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+      };
+    }
   }, []);
+
+  const windowWidth = window.innerWidth;
+  console.log(windowWidth);
 
   return (
     <main>
-      <div
-        style={{
-          left: mousePosition.x,
-          top: mousePosition.y,
-        }}
-        className='blob'
-        ref={blobRef}
-      ></div>
+      {windowWidth > 1024 && (
+        <div
+          style={{
+            left: mousePosition.x,
+            top: mousePosition.y,
+          }}
+          className='blob'
+          ref={blobRef}
+        ></div>
+      )}
       {/* <div className='blur' ref={divRef}></div> */}
       <section className='hidden' ref={(el) => section.current.push(el)}>
         <h2 className='mainH2 firstH2'>Background</h2>

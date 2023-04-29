@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NavBar.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { VscFilePdf } from 'react-icons/vsc';
+import MobileNav from './MobileNav';
 
 const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
 
@@ -35,11 +36,12 @@ export default function NavBar() {
           <FaGithub className='icons' />
           <li>Github</li>
         </a>
-        <a className='flex resume' onClick={downloadResume}>
+        <a href='#' className='flex resume' onClick={downloadResume}>
           <VscFilePdf className='icons' />
           <li>Resume</li>
         </a>
       </ul>
+      <MobileNav />
     </nav>
   );
 }
