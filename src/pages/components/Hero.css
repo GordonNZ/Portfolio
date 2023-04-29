@@ -9,7 +9,7 @@
   background-size: cover;
 }
 .heroOverlay {
-  min-height: 100vh;
+  min-height: 110vh;
   min-width: 100%;
   display: flex;
   align-items: center;
@@ -29,11 +29,11 @@
   z-index: 1;
 }
 .heroTitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(0.6rem, 10vw, 1.2rem);
   font-weight: 550;
 }
 .heroName {
-  font-size: clamp(2rem, 3rem + 2vw, 5rem);
+  font-size: clamp(1rem, 6vw, 4.5rem);
   position: relative;
   left: 4rem;
   /* font-family: 'Boska-Variable'; */
@@ -43,11 +43,11 @@
 }
 .heroDesc {
   --bg-size: 200%;
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 5vw, 1.4rem);
   position: relative;
   left: 6rem;
   font-weight: 700;
-  background: linear-gradient(to right, #a2d2ff, #ffafcc, #cdb4db, #a2d2ff) 0 0 /
+  background: linear-gradient(to right, #a2d2ff, #ffafcc, #ca9be5, #a2d2ff) 0 0 /
     var(--bg-size) 120%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -67,7 +67,7 @@
 }
 
 .heroP {
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1rem);
   position: relative;
   left: 6rem;
 }
@@ -83,5 +83,76 @@
   }
   100% {
     border-radius: 70% 30% 67% 33% / 37% 72% 28% 63%;
+  }
+}
+@media (max-width: 1024px) {
+  .heroLeftContainer {
+    width: 50%;
+    margin: 0 4em 0 2em;
+  }
+  .heroTitle {
+    margin: 0 1em;
+  }
+  .heroName {
+    /* position: relative; */
+    left: 1em;
+  }
+  .heroDesc {
+    /* position: relative; */
+    left: 3em;
+  }
+  .heroP {
+    position: static;
+    margin: 0 4.5em;
+  }
+  .heroImg {
+    width: 28%;
+  }
+}
+@media (max-width: 768px) {
+  .heroOverlay {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .heroImg {
+    width: 40%;
+    margin: 2em 0;
+  }
+  .heroLeftContainer {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heroLeftContainer > * {
+    position: static;
+  }
+  .heroDesc {
+    position: static;
+  }
+  .heroP {
+    margin: 1em 1em;
+  }
+}
+@media (max-width: 375px) {
+  .heroLeftContainer {
+    width: 100%;
+    margin: 0 0.5em;
+  }
+  .heroTitle {
+    margin: 0 1em;
+  }
+  .heroName {
+    /* position: relative; */
+    left: 1em;
+  }
+  .heroDesc {
+    /* position: relative; */
+    left: 1em;
+  }
+
+  .heroImg {
+    width: 75%;
   }
 }
