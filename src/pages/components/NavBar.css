@@ -62,9 +62,11 @@ nav > * {
 .navList {
   display: flex;
   list-style: none;
+  overflow: hidden;
 }
 .navList > * {
   margin: 0 1em;
+  font-size: clamp(1rem, 1rem, 1.5rem);
 }
 a {
   text-decoration: none;
@@ -104,6 +106,12 @@ a:hover {
     display: flex;
     align-items: center;
   }
+  .sticky {
+    backdrop-filter: none;
+    background-color: rgba(32, 32, 32, 1);
+    color: var(--textMainWhite);
+  }
+
   .mobileNav ul {
     display: flex;
     flex-direction: column;
@@ -112,10 +120,11 @@ a:hover {
     top: 10vh;
     left: 0;
     /* width: 100%; */
-    background: rgba(35, 35, 35, 0.25);
+    background: rgba(35, 35, 35, 0.3);
+    padding: 1em 0;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    padding: 1em 0;
+    color: var(--textMainBlack);
   }
   a {
     width: fit-content;

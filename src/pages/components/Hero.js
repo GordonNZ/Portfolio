@@ -4,32 +4,29 @@ import axios from 'axios';
 //npm i @react-spring/parallax
 // import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import gordon from '../../assets//img/gordon.jpg';
-
 export default function Hero() {
   const [background, setBackground] = useState('');
 
-  const ranNum = Math.floor(Math.random() * 10);
+  const ranNum = Math.floor(Math.random() * 20);
+  // console.log(ranNum);
+
+  const ACCESSKEY = process.env.REACT_APP_ACCESS_KEY;
 
   useEffect(() => {
     const getBackground = async () => {
       try {
         //await - waits for data to be ready while running rest of js code
         const res = await axios.get(
-          'https://api.unsplash.com/search/photos/?client_id=dZHNOHog8e0vPnC-yF-_B3pcINmMfA-GcgMTOVaJBPo&query=new zealand landscape&orientation=landscape'
+          `https://api.unsplash.com/search/photos/?client_id=${ACCESSKEY}&query=new zealand mountain&orientation=landscape&per_page=20`
         );
-        setBackground(res.data.results[ranNum].urls.full);
+        setBackground(res.data.results[ranNum].urls.regular);
+        // console.log(res.data.results);
       } catch (err) {
         // catch is run only if there is an error in try
         console.log('Caught an error.', err);
       }
     };
     getBackground();
-    // axios
-    //   .get(
-    //     'https://api.unsplash.com/search/photos/?client_id=dZHNOHog8e0vPnC-yF-_B3pcINmMfA-GcgMTOVaJBPo&query=new zealand landscape&orientation=landscape'
-    //   )
-    //   .then((res) => setBackground(res.data.results[ranNum].urls.full))
-    //   .catch((err) => console.log(err));
   }, []);
 
   const time = new Date().getHours();

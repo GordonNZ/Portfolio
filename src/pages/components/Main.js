@@ -90,7 +90,7 @@ export default function Main() {
   }, []);
 
   const windowWidth = window.innerWidth;
-  console.log(windowWidth);
+  // console.log(windowWidth);
 
   return (
     <main>

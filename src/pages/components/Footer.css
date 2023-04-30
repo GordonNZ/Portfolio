@@ -1,12 +1,13 @@
 .footer {
-  height: 55vh;
+  /* height: 150%; */
   /* justify-content: center; */
   margin-top: 5em;
   flex-direction: column;
   align-items: center;
   border-top: 2px solid var(--textMainBlack);
-  background: rgba(35, 35, 35, 0.25);
+  background: rgba(35, 35, 35, 0.45);
   overflow-y: hidden;
+  padding: 0 0 4em 0;
 }
 .connectH2 {
   margin: 1em 1em;
