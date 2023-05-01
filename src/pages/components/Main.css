@@ -90,34 +90,21 @@ article {
   filter: blur(40px);
   animation: rotate 5s infinite linear alternate;
 }
-@keyframes rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-    transform-origin: center;
-  }
-  50% {
-    transform: translate(-50%, -50%) rotate(180deg) scaleX(1.1) scaleY(0.9);
-    transform-origin: center;
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-    transform-origin: center;
-  }
-}
-main {
-  max-height: 100% !important;
-}
-/* .blur {
-  min-height: 100% !important;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  backdrop-filter: blur(100px);
-  top: 11vh;
-  /* background-color: brown; */
-/* }  */
-
 @media (prefers-reduced-motion: no-preference) {
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+      transform-origin: center;
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg) scaleX(1.1) scaleY(0.9);
+      transform-origin: center;
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+      transform-origin: center;
+    }
+  }
   .hidden {
     opacity: 0;
     filter: blur(1px);
@@ -161,7 +148,6 @@ main {
     padding: 0.5em 0.2em 0 0.2em;
   }
 }
-
 @media (max-width: 375px) {
   .mainProjectSection {
     margin: 0 0.5em;

@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
 import axios from 'axios';
-//npm i @react-spring/parallax
-// import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import gordon from '../../assets//img/gordon.jpg';
+
 export default function Hero() {
   const [background, setBackground] = useState('');
-
-  const ranNum = Math.floor(Math.random() * 20);
-  // console.log(ranNum);
 
   const ACCESSKEY = process.env.REACT_APP_ACCESS_KEY;
 
   useEffect(() => {
+    const ranNum = Math.floor(Math.random() * 20);
+    // console.log(ranNum);
     const getBackground = async () => {
       try {
         //await - waits for data to be ready while running rest of js code
