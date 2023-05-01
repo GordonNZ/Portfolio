@@ -1,9 +1,8 @@
-import image1 from '../../assets/img/todoslides/todoslide1.png';
+import image1 from '../../assets/img/todoslides/todoslide11.png';
 import image2 from '../../assets/img/todoslides/todoslide2.png';
 import image3 from '../../assets/img/todoslides/todoslide3.png';
 import image4 from '../../assets/img/todoslides/todoslide4.png';
-import image5 from '../../assets/img/todoslides/todoslide5.png';
-import image6 from '../../assets/img/todoslides/todoslide6.png';
+import image5 from '../../assets/img/todoslides/todoslidemobile.png';
 
 export const ToDoSlides = [
   {
@@ -20,8 +19,5 @@ export const ToDoSlides = [
   },
   {
     image: image5,
-  },
-  {
-    image: image6,
   },
 ];

@@ -1,10 +1,4 @@
 .heroBg {
-  /* min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; */
-  /* flex-direction: column; */
-  /* background-color: rgb(241, 241, 241); */
   background-position: center;
   background-size: cover;
 }
@@ -55,17 +49,6 @@
   /* animation: animateHeroDesc 5s infinite linear; */
   max-width: fit-content;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .heroDesc {
-    animation: animateHeroDesc 4s infinite linear;
-  }
-  @keyframes animateHeroDesc {
-    to {
-      background-position: var(--bg-size) 0;
-    }
-  }
-}
-
 .heroP {
   font-size: clamp(1rem, 2vw, 1rem);
   position: relative;
@@ -75,14 +58,26 @@
   width: 18%;
   border-radius: 32% 68% 45% 55% / 57% 46% 54% 43%;
   border: 3px solid var(--textMainWhite);
-  animation: heroImg 6s 1s infinite linear alternate;
 }
-@keyframes heroImg {
-  0% {
-    border-radius: 32% 68% 45% 55% / 57% 46% 54% 43%;
+@media (prefers-reduced-motion: no-preference) {
+  .heroDesc {
+    animation: animateHeroDesc 4s infinite linear;
   }
-  100% {
-    border-radius: 70% 30% 67% 33% / 37% 72% 28% 63%;
+  @keyframes animateHeroDesc {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+  .heroImg {
+    animation: heroImg 6s 1s infinite linear alternate;
+  }
+  @keyframes heroImg {
+    0% {
+      border-radius: 32% 68% 45% 55% / 57% 46% 54% 43%;
+    }
+    100% {
+      border-radius: 70% 30% 67% 33% / 37% 72% 28% 63%;
+    }
   }
 }
 @media (max-width: 1024px) {
@@ -115,7 +110,7 @@
     justify-content: center;
   }
   .heroImg {
-    width: 40%;
+    width: 55%;
     margin: 2em 0;
   }
   .heroLeftContainer {
@@ -151,7 +146,6 @@
     /* position: relative; */
     left: 1em;
   }
-
   .heroImg {
     width: 75%;
   }

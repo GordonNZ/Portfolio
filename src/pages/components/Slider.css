@@ -7,13 +7,6 @@
   align-items: center;
   flex-direction: column;
 }
-
-/* .image {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-} */
-
 .rightArrow {
   position: absolute;
   top: 50%;
@@ -23,7 +16,6 @@
   cursor: pointer;
   user-select: none;
 }
-
 .leftArrow {
   position: absolute;
   top: 50%;
@@ -39,20 +31,14 @@
   background-color: var(--textMainBlack);
   font-size: clamp(2rem, 5vw, 3rem);
 }
-
 .arrow:hover {
   opacity: 1;
 }
-
 .slide {
   opacity: 0.8;
   transition-duration: 0.5s ease;
 }
-
 .slide.active {
   opacity: 1;
   transition-duration: 0.5s;
-}
-
-@media screen and (max-width: 375px) {
 }

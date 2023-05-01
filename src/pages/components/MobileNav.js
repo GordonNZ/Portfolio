@@ -4,9 +4,8 @@ import { VscFilePdf } from 'react-icons/vsc';
 import { HiMenu } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 
-const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
-
 export default function MobileNavBar() {
+  const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
   const downloadResume = () => {
     window.open(RESUME);
     setOpen(false);

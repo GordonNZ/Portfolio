@@ -20,6 +20,7 @@ export default function Main() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const blobRef = useRef(null);
   const section = useRef([]);
+  const [position, setPosition] = useState(0);
 
   useEffect(() => {
     // Create a new Intersection Observer
@@ -53,9 +54,8 @@ export default function Main() {
         }
       );
     }
-  }, [mousePosition]);
+  }, [mousePosition, position]);
 
-  const [position, setPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
     setPosition(position);
@@ -80,6 +80,9 @@ export default function Main() {
     }
   }
 
+  const windowWidth = window.innerWidth;
+  // console.log(windowWidth);
+
   useEffect(() => {
     if (windowWidth > 1024) {
       document.addEventListener('mousemove', handleMouseMove);
@@ -87,10 +90,7 @@ export default function Main() {
         document.removeEventListener('mousemove', handleMouseMove);
       };
     }
-  }, []);
-
-  const windowWidth = window.innerWidth;
-  console.log(windowWidth);
+  }, [windowWidth]);
 
   return (
     <main>
@@ -104,10 +104,8 @@ export default function Main() {
           ref={blobRef}
         ></div>
       )}
-      {/* <div className='blur' ref={divRef}></div> */}
       <section className='hidden' ref={(el) => section.current.push(el)}>
         <h2 className='mainH2 firstH2'>Background</h2>
-
         <div className='articleFlex'>
           <article>
             <h3 className='mainH3'>Mission Ready</h3>
