@@ -9,8 +9,13 @@ export default function Hero() {
   const ACCESSKEY = process.env.REACT_APP_ACCESS_KEY;
 
   useEffect(() => {
-    const ranNum = Math.floor(Math.random() * 20);
+    let ranNum = Math.floor(Math.random() * 20);
     // console.log(ranNum);
+    if (ranNum === 3 || ranNum === 12) {
+      ranNum += 1;
+      // console.log(ranNum);
+    }
+
     const getBackground = async () => {
       try {
         //await - waits for data to be ready while running rest of js code

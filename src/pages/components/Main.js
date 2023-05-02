@@ -15,6 +15,7 @@ import {
 import ImageSlider from './ImageSlider';
 import { ToDoSlides } from './ToDoSlides';
 import { MissionXSlides } from './MissionXSlides';
+import badge from '../../assets/img/MissionReadyBadge.png';
 
 export default function Main() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -108,7 +109,10 @@ export default function Main() {
         <h2 className='mainH2 firstH2'>Background</h2>
         <div className='articleFlex'>
           <article>
-            <h3 className='mainH3'>Mission Ready</h3>
+            <div className='flex mainBadgeContainer'>
+              <h3 className='mainH3'>Mission Ready</h3>
+              <img src={badge} alt='Mission Ready Badge' className='badge' />
+            </div>
             <p>
               I completed the 12-week Full Stack Developer Accelerator, which
               equipped me with skills in developing full stack responsive web
@@ -125,6 +129,14 @@ export default function Main() {
               AUT. This is what pushed me to pursue web development as a career
               through Mission Ready.
             </p>
+            <br />
+            <a
+              href='https://futureenvironments.aut.ac.nz/directory/gordon-zam?dept='
+              target='blank'
+            >
+              Projects
+            </a>{' '}
+            <FaArrowRight className='icons' />
           </article>
         </div>
       </section>
