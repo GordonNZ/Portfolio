@@ -13,7 +13,7 @@ export default function NavBar() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   // console.log(position);
 
-  const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
+  const RESUME = 'http://localhost:3000/Gordon Zam - Resume.pdf';
 
   const downloadResume = () => {
     window.open(RESUME);

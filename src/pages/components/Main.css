@@ -33,6 +33,13 @@ article {
 .mainH3 {
   margin: 0.5em 0 0.8em 0;
 }
+.mainBadgeContainer {
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+.badge {
+  width: 19%;
+}
 .mainGrid {
   display: grid;
   grid-auto-columns: minmax(0, 1fr);
@@ -78,7 +85,7 @@ article {
 }
 .blob {
   background-color: white;
-  height: 300px;
+  height: 250px;
   aspect-ratio: 1;
   position: absolute;
   top: 50%;
@@ -87,8 +94,8 @@ article {
   border-radius: 50%;
   background: var(--accentGradient);
   z-index: -2;
-  filter: blur(40px);
-  animation: rotate 5s infinite linear alternate;
+  filter: blur(30px);
+  animation: rotate 5s infinite linear;
 }
 @media (prefers-reduced-motion: no-preference) {
   @keyframes rotate {
@@ -97,7 +104,7 @@ article {
       transform-origin: center;
     }
     50% {
-      transform: translate(-50%, -50%) rotate(180deg) scaleX(1.1) scaleY(0.9);
+      transform: translate(-50%, -50%) rotate(180deg) scaleX(1.2) scaleY(0.85);
       transform-origin: center;
     }
     to {
@@ -151,5 +158,9 @@ article {
 @media (max-width: 375px) {
   .mainProjectSection {
     margin: 0 0.5em;
+  }
+  article {
+    padding: 2em 0.5em;
+    width: 100%;
   }
 }
