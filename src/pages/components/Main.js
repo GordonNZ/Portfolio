@@ -132,10 +132,11 @@ export default function Main() {
             <br />
             <a
               href='https://futureenvironments.aut.ac.nz/directory/gordon-zam?dept='
-              target='blank'
+              target='_blank'
+              rel='noreferrer'
             >
               Projects
-            </a>{' '}
+            </a>
             <FaArrowRight className='icons' />
           </article>
         </div>
@@ -191,7 +192,8 @@ export default function Main() {
             <p>Frontend Project</p>
             <a
               href='https://github.com/GordonNZ/todolistbygordon'
-              target='blank'
+              target='_blank'
+              rel='noreferrer'
             >
               Github <FaArrowRight className='icons' />
             </a>
