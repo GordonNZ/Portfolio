@@ -5,11 +5,6 @@ import { HiMenu } from 'react-icons/hi';
 import { IoClose } from 'react-icons/io5';
 
 export default function MobileNavBar() {
-  const RESUME = 'http://localhost:3000/GordonZamCV.pdf';
-  const downloadResume = () => {
-    window.open(RESUME);
-    setOpen(false);
-  };
   const [open, setOpen] = useState(false);
 
   const hamburgerIcon = (
@@ -27,23 +22,30 @@ export default function MobileNavBar() {
         <ul className='mobileNavList'>
           <a
             href='https://www.linkedin.com/in/gordonzam/'
-            target='blank'
+            target='_blank'
             className='flex'
             onClick={closeMobileMenu}
+            rel='noreferrer'
           >
             <FaLinkedin className='icons' />
             <li>Linkedin</li>
           </a>
           <a
             href='https://github.com/GordonNZ'
-            target='blank'
+            target='_blank'
             className='flex'
             onClick={closeMobileMenu}
+            rel='noreferrer'
           >
             <FaGithub className='icons' />
             <li>Github</li>
           </a>
-          <a href='#' className='flex resume' onClick={downloadResume}>
+          <a
+            href='Gordon Zam - Resume.pdf'
+            className='flex resume'
+            target='_blank'
+            rel='noreferrer'
+          >
             <VscFilePdf className='icons' />
             <li>Resume</li>
           </a>

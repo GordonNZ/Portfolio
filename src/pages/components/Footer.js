@@ -10,16 +10,18 @@ export default function Footer() {
       <div className='flex'>
         <a
           href='https://www.linkedin.com/in/gordonzam/'
-          target='blank'
+          target='_blank'
           className='flex connectLink'
+          rel='noreferrer'
         >
           <FaLinkedin className='icons' />
           <p className='iconText'>Linkedin</p>
         </a>
         <a
           href='https://www.Github.com/GordonNZ'
-          target='blank'
+          target='_blank'
           className='flex connectLink'
+          rel='noreferrer'
         >
           <FaGithub className='icons' />
           <p className='iconText'>GitHub</p>
