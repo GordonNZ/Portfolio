@@ -38,7 +38,7 @@ export default function NavBar() {
           <li>Github</li>
         </a>
         <a
-          href='Gordon Zam - Resume.pdf'
+          href='Gordon Zam CV.pdf'
           className='flex resume'
           target='_blank'
           rel='noreferrer'
